@@ -36,7 +36,10 @@ public class EnemyAlien : MonoBehaviour, IEnemy
 
     private void Update()
     {
-        alien.position = Vector3.MoveTowards(alien.position, player.position, distance) * Time.deltaTime * speed;
+        if (Vector3.Distance(alien.position, player.position) >= distance)
+        {
+            alien.position = Vector3.MoveTowards(alien.position, player.position, Time.deltaTime * speed);
+        }
     }
 
     private IEnumerator WaitShoot()
@@ -63,8 +66,16 @@ public class EnemyAlien : MonoBehaviour, IEnemy
         Vector3 pos = player.transform.position;
         pos.z = 0;
         shoots = Instantiate(alienShoot, alien.position, Quaternion.identity, alien);
-        shoots.transform.LookAt(pos);
-        shoots.transform.rotation = Quaternion.Euler(0,0,shoots.transform.eulerAngles.z*-1);
+        shoots.transform.LookAt(pos, Vector3.forward);
+        if (pos.x > alien.position.x)
+        {
+            shoots.transform.rotation = Quaternion.Euler(0,0,shoots.transform.eulerAngles.x*-1 -90);
+        }
+        else
+        {
+            shoots.transform.rotation = Quaternion.Euler(0,0,shoots.transform.eulerAngles.x +90);
+        }
+        
         Destroy(shoots, 3f);
     }
 

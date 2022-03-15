@@ -3,7 +3,8 @@
     "rootNamespace": "",
     "references": [
         "CoreInerfaces",
-        "Unity.InputSystem"
+        "Unity.InputSystem",
+        "UI"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

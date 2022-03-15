@@ -481,7 +481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   angularSpeed: 1
-  fxDestroy: {fileID: 100894, guid: d4d6a29c9156ee948a0a44b98b1f1da8, type: 3}
+  fxDestroy: {fileID: 157066, guid: d75bea4d6c9e81d419a11ed44c3c4718, type: 3}
   containerChilds: {fileID: 2183268607515671460}
 --- !u!1 &6614731723416729615
 GameObject:

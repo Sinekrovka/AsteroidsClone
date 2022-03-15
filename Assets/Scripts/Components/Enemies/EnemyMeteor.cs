@@ -44,6 +44,9 @@ public class EnemyMeteor : MonoBehaviour, IEnemy
             }
         }
 
+        GameObject particle = Instantiate(fxDestroy, meteor.position, Quaternion.identity, meteor);
+        particle.transform.SetParent(null);
+        Destroy(particle, 1.5f);
         Destroy(gameObject);
     }
 }

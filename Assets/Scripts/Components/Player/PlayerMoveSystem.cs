@@ -36,7 +36,7 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
     {
         GameObject shootOnly = Instantiate(shootPrefab, _player.GetChild(0).position, _player.rotation, null);
         Destroy(shootOnly, 3f);
-        
+        UIController.Instance.GetShoot();
     }
 
     private void Update()
@@ -70,6 +70,6 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
 
     public void Damage()
     {
-        
+        UIController.Instance.GetHealt();
     }
 }

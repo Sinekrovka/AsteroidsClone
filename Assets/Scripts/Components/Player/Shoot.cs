@@ -22,6 +22,7 @@ public class Shoot : MonoBehaviour
         if (!other.CompareTag("Shoot"))
         {
             other.GetComponent<IEnemy>().Damage();
+            UIController.Instance.AddScore(15);
             Destroy(gameObject);
         }
     }

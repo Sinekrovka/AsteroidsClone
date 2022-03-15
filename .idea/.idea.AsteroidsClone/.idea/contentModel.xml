@@ -39,6 +39,7 @@
               <e p="Shoot.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
+              <e p="UI.asmdef" t="Include" />
               <e p="UIController.cs" t="Include" />
             </e>
           </e>
@@ -93,6 +94,7 @@
       <e p="Temp" t="ExcludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
       </e>
+      <e p="UI.csproj" t="IncludeRecursive" />
     </e>
     <e p="E:\Users\ZLO\.Rider2018.3\system\extResources" t="IncludeRecursive" />
     <e p="E:\Users\ZLO\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_AsteroidsClone.-1867978459.00" t="ExcludeRecursive" />
