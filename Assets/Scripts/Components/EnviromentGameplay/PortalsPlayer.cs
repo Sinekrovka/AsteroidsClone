@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PortalsPlayer : MonoBehaviour
 {
-    private GameObject player;
+    [SerializeField] private GameObject player;
     private GameObject doublePlayer;
 
     private Vector2 minBounds;
@@ -12,19 +12,19 @@ public class PortalsPlayer : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.FindWithTag("Player");
         Camera camera = Camera.main;
         float width = camera.pixelWidth;
         float height = camera.pixelHeight;
         minBounds = camera.ScreenToWorldPoint(new Vector2 (0, 0));
-        maxBounds = camera.ScreenToWorldPoint(new Vector2 (width, height));
+        maxBounds = camera.ScreenToWorldPoint(new Vector2 (width, height-50));
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.Equals(player))
+        if (other.CompareTag("Player"))
         {
             doublePlayer = Instantiate(player);
+            doublePlayer.tag = "Shoot";
             float newX = other.transform.position.x;
             float newY = other.transform.position.y;
             if (other.transform.position.x >= maxBounds.x)

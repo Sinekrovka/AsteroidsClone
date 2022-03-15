@@ -54,4 +54,9 @@ public class SpawnController : MonoBehaviour
         StartCoroutine(SpawnObjectInPool());
         
     }
+
+    private void OnEnable()
+    {
+        StartCoroutine(SpawnObjectInPool());
+    }
 }

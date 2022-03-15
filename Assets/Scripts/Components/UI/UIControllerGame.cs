@@ -18,10 +18,18 @@ public class UIControllerGame : MonoBehaviour
         Instance = this;
     }
 
-    private void Start()
+    private void OnEnable()
     {
         scoreGame = 0;
         healtCount = healtLabel.childCount;
+        for (int i = 0; i < healtCount; ++i)
+        {
+            healtLabel.GetChild(i).GetComponent<Image>().color = Color.white;
+        }
+
+        energyField.fillAmount = 1;
+        textScore.text = "Score: " + scoreGame;
+
     }
 
     public bool GetShoot()
@@ -44,8 +52,13 @@ public class UIControllerGame : MonoBehaviour
         }
         else
         {
-            /*конец игры*/
+            EndGame();
         }
+    }
+
+    public void EndGame()
+    {
+        EndState.Instance.SaveScoreData(scoreGame);
     }
 
     public void AddScore(int score)

@@ -86,4 +86,16 @@ public class EnemyAlien : MonoBehaviour, IEnemy
         Destroy(shoots, 3f);
     }
 
+    public void FatalDamage()
+    {
+        
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer.Equals(6))
+        {
+            other.GetComponent<IEnemy>().FatalDamage();
+        }
+    }
 }

@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.InputSystem.LowLevel;
 
 public class PlayerMoveSystem : MonoBehaviour, IEnemy
 {
@@ -21,6 +22,7 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
         _player = transform;
         speedPreview = speed;
         cam = Camera.main;
+        _input.Disable();
     }
 
     private void OnEnable()
@@ -75,5 +77,10 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
     {
         UIControllerGame.Instance.GetHealt();
         _player.DOShakePosition(0.1f, 0.1f);
+    }
+
+    public void FatalDamage()
+    {
+        UIControllerGame.Instance.EndGame();
     }
 }

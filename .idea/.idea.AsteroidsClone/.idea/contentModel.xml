@@ -34,6 +34,7 @@
             </e>
           </e>
         </e>
+        <e p="SavesScore.xml" t="Include" />
         <e p="ScriptableObjects" t="Include">
           <e p="Scripts" t="Include">
             <e p="ConfigScripts.asmdef" t="Include" />
@@ -52,6 +53,12 @@
               <e p="EnviromentGameplay.asmdef" t="Include" />
               <e p="PortalsPlayer.cs" t="Include" />
               <e p="SpawnController.cs" t="Include" />
+            </e>
+            <e p="GameStateControllers" t="Include">
+              <e p="EndState.cs" t="Include" />
+              <e p="GameState.cs" t="Include" />
+              <e p="StartState.cs" t="Include" />
+              <e p="States.asmdef" t="Include" />
             </e>
             <e p="Player" t="Include">
               <e p="Player.asmdef" t="Include" />
@@ -111,6 +118,7 @@
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="Player.csproj" t="IncludeRecursive" />
+      <e p="States.csproj" t="IncludeRecursive" />
       <e p="Temp" t="ExcludeRecursive">
         <e p="Bin" t="ExcludeRecursive" />
       </e>

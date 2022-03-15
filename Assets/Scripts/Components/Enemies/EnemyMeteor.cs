@@ -51,11 +51,16 @@ public class EnemyMeteor : MonoBehaviour, IEnemy
         Destroy(gameObject);
     }
 
+    public void FatalDamage()
+    {
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer.Equals(6))
         {
-            other.GetComponent<IEnemy>().Damage();
+            other.GetComponent<IEnemy>().FatalDamage();
         }
     }
 }
