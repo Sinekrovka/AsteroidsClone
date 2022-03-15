@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class PlayerMoveSystem : MonoBehaviour
+public class PlayerMoveSystem : MonoBehaviour, IEnemy
 {
     [SerializeField] private float speed;
     [SerializeField] private GameObject shootPrefab;
@@ -67,5 +66,10 @@ public class PlayerMoveSystem : MonoBehaviour
     {
         _player.LookAt(point, Vector3.forward);
         _player.rotation = Quaternion.Euler(0,0,_player.eulerAngles.z*-1);
+    }
+
+    public void Damage()
+    {
+        
     }
 }

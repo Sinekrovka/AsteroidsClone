@@ -1,0 +1,17 @@
+{
+    "name": "EnviromentGameplay",
+    "rootNamespace": "",
+    "references": [
+        "GUID:18aa264cee622d14bb581bd9489896fc",
+        "GUID:050d563319dc3c746957276c11488e63"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

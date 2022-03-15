@@ -6,6 +6,7 @@
       <e p="Assets" t="Include">
         <e p="ScriptableObjects" t="Include">
           <e p="Scripts" t="Include">
+            <e p="ConfigScripts.asmdef" t="Include" />
             <e p="EnemyConfig.cs" t="Include" />
           </e>
         </e>
@@ -16,14 +17,15 @@
               <e p="EnemyAlien.cs" t="Include" />
               <e p="EnemyMeteor.cs" t="Include" />
             </e>
+            <e p="EnviromentGameplay" t="Include">
+              <e p="EnviromentGameplay.asmdef" t="Include" />
+              <e p="SpawnController.cs" t="Include" />
+            </e>
             <e p="Player" t="Include">
               <e p="Player.asmdef" t="Include" />
               <e p="PlayerMoveSystem.cs" t="Include" />
               <e p="Shoot.cs" t="Include" />
             </e>
-            <e p="PlayerMoveSystem.cs" t="Include" />
-            <e p="Shoot.cs" t="Include" />
-            <e p="SpawnController.cs" t="Include" />
           </e>
           <e p="Core" t="Include">
             <e p="CoreInerfaces.asmdef" t="Include" />
@@ -65,8 +67,10 @@
         </e>
       </e>
       <e p="AsteroidsClone.sln" t="IncludeFlat" />
+      <e p="ConfigScripts.csproj" t="IncludeRecursive" />
       <e p="CoreInerfaces.csproj" t="IncludeRecursive" />
       <e p="Enemies.csproj" t="IncludeRecursive" />
+      <e p="EnviromentGameplay.csproj" t="IncludeRecursive" />
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />

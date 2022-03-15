@@ -7,10 +7,7 @@ public class EnemyConfig : ScriptableObject
     [Serializable]
     public struct enemyParams
     {
-        public int healt;
         public GameObject prefabs;
-        public float speedMove;
-        public float speedAngle;
         [Range(1,100)]
         public int rangeSpawn;
     }
