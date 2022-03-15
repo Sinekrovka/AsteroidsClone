@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5590184543590935753}
   - component: {fileID: 8386148968082968547}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2525128939496681244}
   - component: {fileID: 4080210309963943867}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5396636911394996232}
   - component: {fileID: 8115382789135953053}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1413546688253878194}
   - component: {fileID: 1106199421242426218}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -348,7 +348,8 @@ GameObject:
   - component: {fileID: 7121126083959035070}
   - component: {fileID: 7217878910682208091}
   - component: {fileID: 3365585290595399175}
-  m_Layer: 0
+  - component: {fileID: 729678862566049266}
+  m_Layer: 8
   m_Name: BigMeteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -466,6 +467,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.8910488
+--- !u!114 &729678862566049266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5655655961525806576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a024af762540345ad9185c156d8b08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  angularSpeed: 1
+  fxDestroy: {fileID: 100894, guid: d4d6a29c9156ee948a0a44b98b1f1da8, type: 3}
+  containerChilds: {fileID: 2183268607515671460}
 --- !u!1 &6614731723416729615
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,7 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4440249995262805116}
   - component: {fileID: 6565228618833459529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +577,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1273077270588261321}
   - component: {fileID: 7638865980888203112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +660,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2183268607515671460}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ContainerForChilds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -678,7 +695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3760642911771270801}
   - component: {fileID: 3526249652314924877}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: YeyMeteor
   m_TagString: Untagged
   m_Icon: {fileID: 0}

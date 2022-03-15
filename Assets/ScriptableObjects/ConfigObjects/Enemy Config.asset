@@ -13,23 +13,11 @@ MonoBehaviour:
   m_Name: Enemy Config
   m_EditorClassIdentifier: 
   enemyPapamsList:
-  - healt: 1
-    prefabs: {fileID: 5655655961525806576, guid: f45f43f441efe2d44aa3f396d3330ea3, type: 3}
-    speedMove: 1
-    speedAngle: 1
+  - prefabs: {fileID: 5655655961525806576, guid: f45f43f441efe2d44aa3f396d3330ea3, type: 3}
     rangeSpawn: 25
-  - healt: 1
-    prefabs: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
-    speedMove: 2
-    speedAngle: 2
+  - prefabs: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
     rangeSpawn: 50
-  - healt: 1
-    prefabs: {fileID: 6989853600526124352, guid: 4a2525de79a725a4d81866b264a26cbc, type: 3}
-    speedMove: 3
-    speedAngle: 3
+  - prefabs: {fileID: 6989853600526124352, guid: 4a2525de79a725a4d81866b264a26cbc, type: 3}
     rangeSpawn: 75
-  - healt: 3
-    prefabs: {fileID: 1929355396922371112, guid: b534dc08eb454774ebdff1f7e1ab54ea, type: 3}
-    speedMove: 3
-    speedAngle: 0
-    rangeSpawn: 15
+  - prefabs: {fileID: 1929355396922371112, guid: b534dc08eb454774ebdff1f7e1ab54ea, type: 3}
+    rangeSpawn: 6

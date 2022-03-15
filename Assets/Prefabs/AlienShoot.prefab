@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 5742354509018239385}
   - component: {fileID: -4053304493766323600}
   - component: {fileID: -3048969665787996673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AlienShoot
-  m_TagString: Untagged
+  m_TagString: Shoot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6828e8c43097968409b67c157b52798b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 7
 --- !u!61 &-4053304493766323600
 BoxCollider2D:
   m_ObjectHideFlags: 0

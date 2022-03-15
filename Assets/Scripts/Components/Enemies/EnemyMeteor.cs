@@ -30,16 +30,20 @@ public class EnemyMeteor : MonoBehaviour, IEnemy
         if (containerChilds != null)
         {
             int childs = containerChilds.childCount;
+            List<Transform> meteorsLittle = new List<Transform>();
             for (int i = 0; i < childs; ++i)
             {
                 Transform child = containerChilds.GetChild(i);
-                child.SetParent(null);
+                meteorsLittle.Add(child);
                 child.gameObject.SetActive(true);
+            }
+
+            foreach (var child in meteorsLittle)
+            {
+                child.SetParent(null);
             }
         }
 
-        GameObject particle = Instantiate(fxDestroy, meteor.position, Quaternion.identity);
-        Destroy(particle, 1.5f);
         Destroy(gameObject);
     }
 }

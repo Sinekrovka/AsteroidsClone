@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9020496530990564137}
   - component: {fileID: 697808483280656044}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6604858183718702978}
   - component: {fileID: 3510150815076286821}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8326539979879326548}
   - component: {fileID: 7842645288736674448}
   - component: {fileID: 1974141792295407291}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4991,7 +4991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 906410440816924032}
   - component: {fileID: 1386906812882100367}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5076,7 +5076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3702640697628641892}
   - component: {fileID: 8707515614661571263}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5163,7 +5163,7 @@ GameObject:
   - component: {fileID: 227572913569917423}
   - component: {fileID: 4121866363399270032}
   - component: {fileID: -3077433737571077002}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: AlienShip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5312,9 +5312,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healt: 3
   healtContainer: {fileID: 3518719067926589061}
-  fxDestroy: {fileID: 0}
-  alienShoot: {fileID: 0}
-  distance: 0
+  speed: 0
+  fxDestroy: {fileID: 160684, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
+  alienShoot: {fileID: 5801534795361415490, guid: b359769d0614d3347848fa248e85c9c7, type: 3}
+  distance: 3
 --- !u!1 &1939772456441214398
 GameObject:
   m_ObjectHideFlags: 0
@@ -5325,7 +5326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079001958250819446}
   - component: {fileID: 6480044293813656949}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5409,7 +5410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 866066465526372890}
   - component: {fileID: 3199128264548583420}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5493,7 +5494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1681661729598284179}
   - component: {fileID: 3418745970728247227}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5577,7 +5578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8935314975773713879}
   - component: {fileID: 3236331784389177498}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5661,7 +5662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 467801153883973609}
   - component: {fileID: 5427938260270861399}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5745,7 +5746,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4960386185880095616}
   - component: {fileID: 5082308996791874271}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5829,7 +5830,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4199928730111880965}
   - component: {fileID: 2513129035478714516}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5913,7 +5914,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7326544369986380619}
   - component: {fileID: 9145077444617044805}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5997,7 +5998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6902186313904501017}
   - component: {fileID: 2534885837877236843}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6080,7 +6081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3518719067926589061}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HealtContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6115,7 +6116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4806648575343510580}
   - component: {fileID: 5263983121304324276}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6199,7 +6200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 273924040126343234}
   - component: {fileID: 1633078337786306564}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6283,7 +6284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2151319887546964621}
   - component: {fileID: 3780073027401812239}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GameSprites_11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6368,7 +6369,7 @@ GameObject:
   - component: {fileID: 4490430497921591978}
   - component: {fileID: 8627619795189445725}
   - component: {fileID: 3041651034546984278}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

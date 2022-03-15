@@ -5,9 +5,9 @@ using UnityEngine.PlayerLoop;
 
 public class EnemyAlien : MonoBehaviour, IEnemy
 {
-    [SerializeField] private int healt;
+    private int healt;
     [SerializeField] private Transform healtContainer;
-    //[SerializeField] private float speed;
+    [SerializeField] private float speed;
     [SerializeField] private GameObject fxDestroy;
     [SerializeField] private GameObject alienShoot;
     [SerializeField] private float distance;
@@ -19,6 +19,7 @@ public class EnemyAlien : MonoBehaviour, IEnemy
         alien = transform;
         player = GameObject.Find("Player").transform;
         StartCoroutine(WaitShoot());
+        healt = healtContainer.childCount;
     }
 
     public void Damage()
@@ -35,7 +36,7 @@ public class EnemyAlien : MonoBehaviour, IEnemy
 
     private void Update()
     {
-        alien.position = Vector3.MoveTowards(alien.position, player.position, distance);
+        alien.position = Vector3.MoveTowards(alien.position, player.position, distance) * Time.deltaTime * speed;
     }
 
     private IEnumerator WaitShoot()
@@ -47,23 +48,24 @@ public class EnemyAlien : MonoBehaviour, IEnemy
 
     private IEnumerator ShootQuqe()
     {
-        GameObject[] shoots = new GameObject[3];
-        for (int i = 0; i < shoots.Length; i++)
+        for (int i = 0; i < 3; ++i)
         {
-            shoots[i] = Instantiate(alienShoot, alien.position, Quaternion.identity, alien);
-            shoots[i].transform.LookAt(player.transform.position, Vector3.forward);
-            shoots[i].transform.rotation = Quaternion.Euler(0,0,player.eulerAngles.z*-1);
-            shoots[i].SetActive(false);
+            GenerateShoot();
+            yield return new WaitForSeconds(0.5f);
         }
-        shoots[0].SetActive(true);
-        Destroy(shoots[0], 3f);
-        yield return new WaitForSeconds(0.2f);
-        shoots[1].SetActive(true);
-        Destroy(shoots[0], 3f);
-        yield return new WaitForSeconds(0.2f);
-        Destroy(shoots[0], 3f);
-        shoots[2].SetActive(true);
+        
         StartCoroutine(WaitShoot());
+    }
+
+    private void GenerateShoot()
+    {
+        GameObject shoots = new GameObject();
+        Vector3 pos = player.transform.position;
+        pos.z = 0;
+        shoots = Instantiate(alienShoot, alien.position, Quaternion.identity, alien);
+        shoots.transform.LookAt(pos);
+        shoots.transform.rotation = Quaternion.Euler(0,0,shoots.transform.eulerAngles.z*-1);
+        Destroy(shoots, 3f);
     }
 
 }

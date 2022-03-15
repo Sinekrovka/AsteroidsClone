@@ -4,6 +4,18 @@
     <e p="C:\Users\sinek\Projects\AsteroidsClone" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Epic Toon FX" t="Include">
+          <e p="Prefabs" t="Include">
+            <e p="Combat" t="Include">
+              <e p="Combat FX.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ETFXLightFade.cs" t="Include" />
+            <e p="ETFXPitchRandomizer.cs" t="Include" />
+            <e p="ETFXRotation.cs" t="Include" />
+          </e>
+        </e>
         <e p="ScriptableObjects" t="Include">
           <e p="Scripts" t="Include">
             <e p="ConfigScripts.asmdef" t="Include" />
@@ -25,6 +37,9 @@
               <e p="Player.asmdef" t="Include" />
               <e p="PlayerMoveSystem.cs" t="Include" />
               <e p="Shoot.cs" t="Include" />
+            </e>
+            <e p="UI" t="Include">
+              <e p="UIController.cs" t="Include" />
             </e>
           </e>
           <e p="Core" t="Include">
