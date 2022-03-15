@@ -5165,7 +5165,7 @@ GameObject:
   - component: {fileID: -3077433737571077002}
   m_Layer: 10
   m_Name: AlienShip
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5310,9 +5310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bcee3d3bb2fd545a0c6e7707007961, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healt: 3
   healtContainer: {fileID: 3518719067926589061}
-  speed: 0
+  speed: 4
   fxDestroy: {fileID: 160684, guid: de85f8f81ea29ea479250adb36debd92, type: 3}
   alienShoot: {fileID: 5801534795361415490, guid: b359769d0614d3347848fa248e85c9c7, type: 3}
   distance: 3

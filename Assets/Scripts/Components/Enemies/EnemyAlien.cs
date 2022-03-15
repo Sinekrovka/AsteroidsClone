@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -25,11 +26,17 @@ public class EnemyAlien : MonoBehaviour, IEnemy
     public void Damage()
     {
         healt -= 1;
-        healtContainer.GetChild(healt).gameObject.SetActive(false);
-        if (healt <= 0)
+        if (healt > 0)
         {
+            healtContainer.GetChild(healt).gameObject.SetActive(false);
+            alien.DOShakePosition(0.1f, 0.1f);
+        }
+        else
+        {
+            healtContainer.GetChild(0).gameObject.SetActive(false);
             GameObject destFX = Instantiate(fxDestroy, alien.position, Quaternion.identity);
             Destroy(destFX, 1.5f);
+            UIControllerGame.Instance.AddScore(15);
             Destroy(gameObject);
         }
     }
@@ -62,7 +69,7 @@ public class EnemyAlien : MonoBehaviour, IEnemy
 
     private void GenerateShoot()
     {
-        GameObject shoots = new GameObject();
+        GameObject shoots;
         Vector3 pos = player.transform.position;
         pos.z = 0;
         shoots = Instantiate(alienShoot, alien.position, Quaternion.identity, alien);

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\sinek\Projects\AsteroidsClone" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Epic Toon FX" t="Include">
@@ -14,6 +15,23 @@
             <e p="ETFXLightFade.cs" t="Include" />
             <e p="ETFXPitchRandomizer.cs" t="Include" />
             <e p="ETFXRotation.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Plugins" t="Include">
+          <e p="Demigiant" t="Include">
+            <e p="DOTween" t="Include">
+              <e p="Modules" t="Include">
+                <e p="DOTweenModuleAudio.cs" t="Include" />
+                <e p="DOTweenModuleEPOOutline.cs" t="Include" />
+                <e p="DOTweenModulePhysics.cs" t="Include" />
+                <e p="DOTweenModulePhysics2D.cs" t="Include" />
+                <e p="DOTweenModuleSprite.cs" t="Include" />
+                <e p="DOTweenModuleUI.cs" t="Include" />
+                <e p="DOTweenModuleUnityVersion.cs" t="Include" />
+                <e p="DOTweenModuleUtils.cs" t="Include" />
+              </e>
+              <e p="readme.txt" t="Include" />
+            </e>
           </e>
         </e>
         <e p="ScriptableObjects" t="Include">
@@ -30,7 +48,9 @@
               <e p="EnemyMeteor.cs" t="Include" />
             </e>
             <e p="EnviromentGameplay" t="Include">
+              <e p="DeleteObjectsController.cs" t="Include" />
               <e p="EnviromentGameplay.asmdef" t="Include" />
+              <e p="PortalsPlayer.cs" t="Include" />
               <e p="SpawnController.cs" t="Include" />
             </e>
             <e p="Player" t="Include">
@@ -40,7 +60,7 @@
             </e>
             <e p="UI" t="Include">
               <e p="UI.asmdef" t="Include" />
-              <e p="UIController.cs" t="Include" />
+              <e p="UIControllerGame.cs" t="Include" />
             </e>
           </e>
           <e p="Core" t="Include">

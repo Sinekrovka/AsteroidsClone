@@ -17,10 +17,10 @@ public class SpawnController : MonoBehaviour
         camera = Camera.main;
         float width = camera.pixelWidth;
         float height = camera.pixelHeight;
-        Vector2 bottomLeft = camera.ScreenToWorldPoint(new Vector2 (-10, -10));
-        Vector2 bottomRight = camera.ScreenToWorldPoint(new Vector2 (width+10, -10));
-        Vector2 topLeft = camera.ScreenToWorldPoint(new Vector2 (-10, height+10));
-        Vector2 topRight = camera.ScreenToWorldPoint(new Vector2 (width+10, height+10));
+        Vector2 bottomLeft = camera.ScreenToWorldPoint(new Vector2 (-15, -15));
+        Vector2 bottomRight = camera.ScreenToWorldPoint(new Vector2 (width+10, -15));
+        Vector2 topLeft = camera.ScreenToWorldPoint(new Vector2 (-15, height+15));
+        Vector2 topRight = camera.ScreenToWorldPoint(new Vector2 (width+15, height+15));
 
         spawnsPoints = new[] {bottomLeft, bottomRight, topLeft, topRight};
         

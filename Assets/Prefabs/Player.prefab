@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4634493754213945692}
   - component: {fileID: 4547867352650992928}
   - component: {fileID: 3494407073004469589}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4824,9 +4824,11 @@ GameObject:
   - component: {fileID: 5406205468795493858}
   - component: {fileID: 5406205468795493859}
   - component: {fileID: 5406205468795493857}
-  m_Layer: 0
+  - component: {fileID: 5189866192888543901}
+  - component: {fileID: 4712692480983443205}
+  m_Layer: 6
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4915,6 +4917,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   shootPrefab: {fileID: 6986553276332724266, guid: b98349d3803fcfa42a81cb58640f17d4, type: 3}
+--- !u!61 &5189866192888543901
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406205468795493884}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.018548101, y: 0.0046370625}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.675, y: 0.875}
+    newSize: {x: 0.45, y: 0.5833333}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.5266151, y: 0.64314854}
+  m_EdgeRadius: 0
+--- !u!50 &4712692480983443205
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5406205468795493884}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &6173036169079991200
 GameObject:
   m_ObjectHideFlags: 0
@@ -4924,7 +4973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2163362822508235126}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PointShoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4957,7 +5006,7 @@ GameObject:
   - component: {fileID: 6076146103164313253}
   - component: {fileID: 5496284050541039549}
   - component: {fileID: 8341124349338682892}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

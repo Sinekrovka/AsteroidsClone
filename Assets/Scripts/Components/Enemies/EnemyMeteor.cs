@@ -47,6 +47,15 @@ public class EnemyMeteor : MonoBehaviour, IEnemy
         GameObject particle = Instantiate(fxDestroy, meteor.position, Quaternion.identity, meteor);
         particle.transform.SetParent(null);
         Destroy(particle, 1.5f);
+        UIControllerGame.Instance.AddScore(10);
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer.Equals(6))
+        {
+            other.GetComponent<IEnemy>().Damage();
+        }
     }
 }

@@ -1,32 +1,38 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
+
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class UIControllerGame : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textScore;
+    [SerializeField] private Text textScore;
     [SerializeField] private Transform healtLabel;
     [SerializeField] private Image energyField;
-    
-    public static UIController Instance;
-    
+
     private int scoreGame;
     private int healtCount;
+    
+    public static UIControllerGame Instance;
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
         scoreGame = 0;
         healtCount = healtLabel.childCount;
     }
 
-    public void GetShoot()
+    public bool GetShoot()
     {
-        if (energyField.fillAmount > 0)
+        if (energyField.fillAmount - 0.1f >=0)
         {
-            energyField.fillAmount -= 0.02f;
+            energyField.fillAmount -= 0.1f;
+            return true;
         }
+
+        return false;
     }
 
     public void GetHealt()
@@ -52,7 +58,7 @@ public class UIController : MonoBehaviour
     {
         if (energyField.fillAmount < 1)
         {
-            energyField.fillAmount += 0.01f;
+            energyField.fillAmount += 0.001f;
         }
     }
 }

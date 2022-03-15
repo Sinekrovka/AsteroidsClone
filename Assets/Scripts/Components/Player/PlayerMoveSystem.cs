@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class PlayerMoveSystem : MonoBehaviour, IEnemy
@@ -34,9 +35,11 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
 
     private void Shoot()
     {
-        GameObject shootOnly = Instantiate(shootPrefab, _player.GetChild(0).position, _player.rotation, null);
-        Destroy(shootOnly, 3f);
-        UIController.Instance.GetShoot();
+        if (UIControllerGame.Instance.GetShoot())
+        {
+            GameObject shootOnly = Instantiate(shootPrefab, _player.GetChild(0).position, _player.rotation, null);
+            Destroy(shootOnly, 3f);
+        }
     }
 
     private void Update()
@@ -70,6 +73,7 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
 
     public void Damage()
     {
-        UIController.Instance.GetHealt();
+        UIControllerGame.Instance.GetHealt();
+        _player.DOShakePosition(0.1f, 0.1f);
     }
 }

@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 729678862566049266}
   m_Layer: 8
   m_Name: BigMeteor
-  m_TagString: Untagged
+  m_TagString: Enemies
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -461,7 +461,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -780,6 +780,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallMeteor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362732107933851683, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8983848001859604427, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -842,6 +850,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SmallMeteor (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362732107933851683, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8983848001859604427, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -903,6 +919,14 @@ PrefabInstance:
     - target: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
       propertyPath: m_Name
       value: SmallMeteor
+      objectReference: {fileID: 0}
+    - target: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362732107933851683, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8983848001859604427, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
       propertyPath: m_RootOrder
