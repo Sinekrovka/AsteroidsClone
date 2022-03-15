@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ce5a24de2a97df46b51c753a979785c, type: 3}
+  m_Name: Enemy Config
+  m_EditorClassIdentifier: 
+  enemyPapamsList:
+  - healt: 1
+    prefabs: {fileID: 5655655961525806576, guid: f45f43f441efe2d44aa3f396d3330ea3, type: 3}
+    speedMove: 1
+    speedAngle: 1
+    rangeSpawn: 25
+  - healt: 1
+    prefabs: {fileID: 4623755552805727857, guid: 8e785207ee6f8b941af335c53c999041, type: 3}
+    speedMove: 2
+    speedAngle: 2
+    rangeSpawn: 50
+  - healt: 1
+    prefabs: {fileID: 6989853600526124352, guid: 4a2525de79a725a4d81866b264a26cbc, type: 3}
+    speedMove: 3
+    speedAngle: 3
+    rangeSpawn: 75
+  - healt: 3
+    prefabs: {fileID: 1929355396922371112, guid: b534dc08eb454774ebdff1f7e1ab54ea, type: 3}
+    speedMove: 3
+    speedAngle: 0
+    rangeSpawn: 15

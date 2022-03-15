@@ -4,6 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerMoveSystem : MonoBehaviour
 {
     [SerializeField] private float speed;
+    [SerializeField] private GameObject shootPrefab;
+    
     private Vector3 moveDirection;
     private Vector3 previeDirection;
     private float speedPreview;
@@ -32,8 +34,10 @@ public class PlayerMoveSystem : MonoBehaviour
     }
 
     private void Shoot()
-    { 
-        Debug.Log("Pew!");
+    {
+        GameObject shootOnly = Instantiate(shootPrefab, _player.GetChild(0).position, _player.rotation, null);
+        Destroy(shootOnly, 3f);
+        
     }
 
     private void Update()
