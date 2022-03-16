@@ -83,6 +83,6 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
     public void FatalDamage()
     {
         UIControllerGame.Instance.NoneHealt();
-        _player.DOShakePosition(0.3f, 0.3f).OnComplete(UIControllerGame.Instance.EndGame);
+        _player.DOShakePosition(0.3f, 0.3f).OnComplete(UIControllerGame.Instance.GetHealt);
     }
 }

@@ -12,6 +12,7 @@ public class UIControllerGame : MonoBehaviour
 
     private int scoreGame;
     private int healtCount;
+    private bool nonEnd;
     
     public static UIControllerGame Instance;
 
@@ -31,6 +32,7 @@ public class UIControllerGame : MonoBehaviour
 
         energyField.fillAmount = 1;
         textScore.text = "Score: " + scoreGame;
+        nonEnd = true;
 
     }
 
@@ -52,7 +54,8 @@ public class UIControllerGame : MonoBehaviour
         {
             healtLabel.GetChild(healtCount).GetComponent<Image>().color = Color.gray;
         }
-        else if(healtCount<=0)
+        
+        if(healtCount<=0)
         {
             EndGame();
         }
@@ -64,11 +67,17 @@ public class UIControllerGame : MonoBehaviour
         {
             healtLabel.GetChild(i).GetComponent<Image>().color = Color.gray;
         }
+
+        healtCount = 0;
     }
 
-    public void EndGame()
+    private void EndGame()
     {
-        EndState.Instance.SaveScoreData(scoreGame);
+        if (nonEnd)
+        {
+            nonEnd = false;
+            EndState.Instance.SaveScoreData(scoreGame);
+        }
     }
 
     public void AddScore(int score)

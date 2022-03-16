@@ -34,7 +34,6 @@
             </e>
           </e>
         </e>
-        <e p="SavesScore.xml" t="Include" />
         <e p="ScriptableObjects" t="Include">
           <e p="Scripts" t="Include">
             <e p="ConfigScripts.asmdef" t="Include" />
