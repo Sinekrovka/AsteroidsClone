@@ -29,39 +29,46 @@ public class EndState : MonoBehaviour
         {
             Destroy(enemies[i]);
         }
-        Dictionary<int, string> dictScore = new Dictionary<int, string>();
+        List<ScoreItem> scoreList = new List<ScoreItem>();
+        
+        ScoreItem currentItem = new ScoreItem();
+        currentItem.score = currentScore;
+        currentItem.time = System.DateTime.Now.ToString();
+        scoreList.Add(currentItem);
+        
         XElement root = new XElement("root");
         if (File.Exists(Application.dataPath + "/SavesScore.xml"))
         {
             root = XDocument.Parse(File.ReadAllText(Application.dataPath+"/SavesScore.xml")).Element("root");
             foreach (var elem in root.Elements())
             {
-                dictScore.Add(int.Parse(elem.Attribute("Score").Value), elem.Attribute("Time").Value);
+                ScoreItem item = new ScoreItem();
+                item.score = int.Parse(elem.Attribute("Score").Value);
+                item.time = elem.Attribute("Time").Value;
+                scoreList.Add(item);
             }
         }
-        dictScore.Add(currentScore, System.DateTime.Now.ToString());
         
-        var sortedDict = new SortedDictionary<int, string>(dictScore);
         root = new XElement("root");
         int index = 0;
 
-        foreach (var elem in sortedDict)
+        foreach (var elem in scoreList)
         {
             XElement scoreStroke = new XElement("stroke");
-            XAttribute score = new XAttribute("Score", elem.Key);
-            XAttribute time = new XAttribute("Time", elem.Value);
+            XAttribute score = new XAttribute("Score", elem.score);
+            XAttribute time = new XAttribute("Time", elem.time);
             scoreStroke.Add(score);
             scoreStroke.Add(time);
             root.Add(scoreStroke);
 
             index += 1;
             GameObject scoreItem = Instantiate(textScoreField, scoreContent);
-            if (elem.Key.Equals(currentScore))
+            if (elem.time.Equals(currentItem.time))
             {
                 scoreItem.GetComponent<Image>().color = currentResultColor;
             }
 
-            scoreItem.GetComponentInChildren<TextMeshProUGUI>().text = $"{index}.   Score: {elem.Key}   ------------------------    {elem.Value}";
+            scoreItem.GetComponentInChildren<TextMeshProUGUI>().text = $"{index}.   Score: {elem.score}   ------------------------    {elem.time}";
         }
         
         XDocument saveDoc = new XDocument(root);
@@ -83,5 +90,11 @@ public class EndState : MonoBehaviour
         {
             Destroy(tableField[i]);
         }
+    }
+
+    private struct ScoreItem
+    {
+        public int score;
+        public string time;
     }
 }

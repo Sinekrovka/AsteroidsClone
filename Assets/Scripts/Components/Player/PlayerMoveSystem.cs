@@ -65,6 +65,7 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
     {
         _player.position += moveDirection * Time.deltaTime * speed;
         previeDirection = moveDirection;
+        UIControllerGame.Instance.GetCoordinats(_player);
     }
 
     private void LookAtPoint()
@@ -81,6 +82,7 @@ public class PlayerMoveSystem : MonoBehaviour, IEnemy
 
     public void FatalDamage()
     {
-        UIControllerGame.Instance.EndGame();
+        UIControllerGame.Instance.NoneHealt();
+        _player.DOShakePosition(0.3f, 0.3f).OnComplete(UIControllerGame.Instance.EndGame);
     }
 }
